@@ -1,0 +1,35 @@
+.head{
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    
+    padding-bottom: 4%;
+    padding-top: 2%;
+    background-color: rebeccapurple;
+}
+
+.head h1{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 200%;
+    
+}
+
+#text-field{
+    margin: 0;
+    width: 50%;
+    padding: 0.5%;
+    margin-left: 25%;
+    padding-right: 0%;
+    float: inline-start;
+    font-size: 16px;
+    
+    size: 20%;
+}
+
+.addBtn{
+    color: white;
+    padding-left: 1%;
+    float: left;
+}
+
