@@ -10,7 +10,7 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap" rel="stylesheet">
 
-        <script src="main.js"></script> 
+        
 
         <title>To-Do List WebApp</title>
     </head>
@@ -23,18 +23,22 @@
             
             <!--text input field-->
             <input id="text-field" type="text" name="text-field" placeholder="enter task">
-            <button class="button">Add</button>
+            <button id="button">Add</button>
 
         </section>
         
         <!--list will be displayed here-->
         <section class="list">
-            <ul>
-                <li>element1</li>
-                <li class="done">element2</li>
-                <li>element3</li>
-                <li>element4</li>
-            </ul>
+            <div id="container">
+                <ul id="theList">
+                    <li>element1</li>
+                    <li class="done">element2</li>
+                    <li>element3</li>
+                    <li>element4</li>
+                </ul>
+            </div>
+            
         </section>
     </body>
+    <script src="main.js"></script> 
 </html>
