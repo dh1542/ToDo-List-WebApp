@@ -1,17 +1,26 @@
+html{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+}
+
+
 .head{
     text-align: center;
     width: 100%;
     margin: 0;
     
-    padding-bottom: 4%;
+    padding-bottom: 8%;
     padding-top: 2%;
-    background-color: rebeccapurple;
+    background-color: #F4DF4EFF;
 }
 
 .head h1{
-    color: white;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+    margin-bottom: 0%;
     font-size: 200%;
+    padding-bottom: 0%;
     
 }
 
@@ -21,15 +30,64 @@
     padding: 0.5%;
     margin-left: 25%;
     padding-right: 0%;
+    
     float: inline-start;
     font-size: 16px;
     
     size: 20%;
 }
 
-.addBtn{
-    color: white;
-    padding-left: 1%;
+/* needs to be fixed */
+.button{
     float: left;
 }
+
+
+
+.list{
+    padding-top: 0;
+    
+    
+}
+
+.list li{
+    text-align: center;
+    list-style: none;
+    padding: 1%;
+}
+
+.list li:hover{
+
+    
+    
+    float: center;
+    padding-top: 2.5%;
+    padding-bottom: 2.5%;
+    background-color: white;
+}
+
+.list ul{
+    margin-left: 0;
+    padding-left: 0;
+    margin-right: 0;
+}
+
+.list li:nth-child(2n){
+   background-color: rgb(208, 208, 209);
+}
+.list li:nth-child(2n):hover{
+    background-color: #F4DF4EFF;
+ }
+.list li:nth-child(2n - 1){
+    background-color: #949398FF;
+ }
+ .list li:nth-child(2n -1):hover{
+    background-color: #F4DF4EFF;
+ }
+
+ /* class if task has been done */
+ .done{
+    text-decoration: line-through;
+ }
+
 
