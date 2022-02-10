@@ -2,18 +2,29 @@
 console.log("file read");
 // get string out of textfield once add is pressed
 
-// add event-listener for button
-document.getElementById('button').addEventListener("click", function(){addNewListElement()});
+// event-listeners for button and list elements
+document.getElementById('button').addEventListener("click", function(){addTask()});
+// removes e
+document.getElementById('theList').addEventListener("click", function(e){uncheckTask(e)});
 
-
-
-function printText(){
-  var input = document.getElementById('text-field').value;
-  console.log(input);
+/**
+ * Adds list element e to class 'done'
+ * @returns void
+ */
+function uncheckTask(e){
+  e.target.className = "done";
 }
 
-function addNewListElement(){
+
+
+/**
+ * Adds an new list element to the to-do list
+ * @returns void
+ */
+function addTask(){
+  // get value of text-field
   var input = document.getElementById('text-field').value;
+  
   
   // warn if nothing is in text-field
   if(input.length == 0){
@@ -22,8 +33,15 @@ function addNewListElement(){
   }
   // else add list element
   else{
-    document.getElementById('theList').innerHTML += ('<li>'+input+'</li>');
+    // add new overlfow list item
+    document.getElementById('theList').innerHTML += ('<li class="undone">'+input+'</li>');
+
+    // clear text field after task was added
+    document.getElementById('text-field').value = "";
   }
 }
+
+
+
 
 
