@@ -1,24 +1,24 @@
 // event-listeners for button and list elements
 document.getElementById('button').addEventListener("click", function(){addTask()});
-
-// array of event listeners
-var listener = [];
-
+document.getElementById('theList').addEventListener("click", function(e){uncheckTask(e)});
+document.getElementById('remove').addEventListener("click", function(){removeTask(listElementsCounter)})
 // counts elements
-var listElementsCounter = 0;
+var listElementsCounter = 1;
 
 
 /**
  * removes task from list
- * @param {button} e 
+ * @param {button} _i 
  */
-function removeTask(e){
+function removeTask(_i){
     // first give li element new id
     console.log("remove");
-    e.removeTask
-    // readd list
-    // document.getElementById('container').innerHTML += '<ul id="theList"></ul>';
+    document.getElementById('listElement' + _i).remove();
+
+  
 }
+
+
 
 /**
  * Adds list element e to class 'done'
@@ -37,17 +37,16 @@ function addTask(){
   // get value of text-field
   var input = document.getElementById('text-field').value;
   
-  
-  
   // warn if nothing is in text-field
   if(input.length == 0){
     alert("Insert a task!");
     return;
   }
+
   // else add list element
   else{
     // create string for list element
-    var listItem = '<li class="undone" ' + 'id="listElements">'+input+'<button id="remove">Remove</button></li>'
+    var listItem = '<li class="undone" ' + 'id="listElement' + listElementsCounter  +'">'+input+'<span id="remove">x</span></li>'
 
     // add new overlfow list item
     document.getElementById('theList').innerHTML += (listItem);
@@ -60,16 +59,12 @@ function addTask(){
 
     // adds eventListener for remove button
 
-    var l1 = document.getElementById('listElements').addEventListener("click", function(e){removeTask(e)});
-    listener.push(l1);
-    // adds eventListener for new task
-
-
-    var l2 = document.getElementById('theList').addEventListener("click", function(e){uncheckTask(e)});
-    listener.push(l2);
+    
+    
     listElementsCounter = listElementsCounter + 1;
     
     }
+    
 }
 
 
